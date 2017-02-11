@@ -15,6 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'active_model_serializers'
 
+gem 'devise'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
