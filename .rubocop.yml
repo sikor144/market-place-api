@@ -1,0 +1,36 @@
+AllCops:
+  Exclude:
+    - 'Guardfile'
+    - 'Rakefile'
+    - 'app/services/operations/seeds/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'app/models/spree/*'
+    - 'script/**/*'
+    - 'node_modules/**/*'
+Documentation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 16.5
+Metrics/ClassLength:
+  Max: 150
+Metrics/LineLength:
+  Enabled: true
+  Max: 100
+Rails/ActionFilter:
+  Enabled: false
+SignalException:
+  Enabled: false
+Style/DotPosition:
+  EnforcedStyle: leading
+  Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+  Enabled: true
