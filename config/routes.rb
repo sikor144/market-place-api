@@ -1,12 +1,8 @@
-require 'api_constraints'
-
 Rails.application.routes.draw do
-  devise_for :users
-  namespace :api, defaults: { format: :json },
-                  contstraints: { subdomain: 'api' }, path: '/' do
-    scope module: :v1,
-          constraints: ApiConstraints.new(version: 1, default: true) do
-      # Future codr
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :users, only: [:show, :create]
     end
   end
+  devise_for :users
 end

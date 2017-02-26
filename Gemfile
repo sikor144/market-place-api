@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.1'
 
 gem 'puma', '~> 3.0'
-gem 'rake', '< 11.0'
+gem 'rake'
 gem 'sqlite3'
 
 gem 'coffee-rails', '~> 4.2'
@@ -19,6 +19,8 @@ gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'pry-rescue'
 end
 
 group :development do
@@ -31,7 +33,8 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
-  gem 'rspec-rails', '~> 2.14'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
 
